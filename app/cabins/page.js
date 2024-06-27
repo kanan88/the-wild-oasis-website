@@ -1,5 +1,3 @@
-import Counter from '@/app/_components/Counter';
-
 const CabinsPage = () => {
   return (
     <div>
