@@ -4,7 +4,7 @@ import { supabase } from './supabase';
 /////////////
 // GET
 
-export async function getCabin(id) {
+export const getCabin = async (id) => {
   const { data, error } = await supabase
     .from('cabins')
     .select('*')
@@ -19,9 +19,9 @@ export async function getCabin(id) {
   }
 
   return data;
-}
+};
 
-export async function getCabinPrice(id) {
+export const getCabinPrice = async (id) => {
   const { data, error } = await supabase
     .from('cabins')
     .select('regularPrice, discount')
@@ -33,7 +33,7 @@ export async function getCabinPrice(id) {
   }
 
   return data;
-}
+};
 
 export const getCabins = async function () {
   const { data, error } = await supabase
