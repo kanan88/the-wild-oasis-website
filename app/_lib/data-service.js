@@ -96,7 +96,7 @@ export async function getBookings(guestId) {
   return data;
 }
 
-export async function getBookedDatesByCabinId(cabinId) {
+export const getBookedDatesByCabinId = async (cabinId) => {
   let today = new Date();
   today.setUTCHours(0, 0, 0, 0);
   today = today.toISOString();
@@ -124,9 +124,9 @@ export async function getBookedDatesByCabinId(cabinId) {
     .flat();
 
   return bookedDates;
-}
+};
 
-export async function getSettings() {
+export const getSettings = async () => {
   const { data, error } = await supabase.from('settings').select('*').single();
 
   if (error) {
@@ -135,9 +135,9 @@ export async function getSettings() {
   }
 
   return data;
-}
+};
 
-export async function getCountries() {
+export const getCountries = async () => {
   try {
     const res = await fetch(
       'https://restcountries.com/v2/all?fields=name,flag'
@@ -147,7 +147,7 @@ export async function getCountries() {
   } catch {
     throw new Error('Could not fetch countries');
   }
-}
+};
 
 /////////////
 // CREATE
