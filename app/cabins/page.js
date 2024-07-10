@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import CabinList from '../_components/CabinList';
 import Spinner from '../_components/Spinner';
 import Filter from '../_components/Filter';
+import ReservationReminder from '../_components/ReservationReminder';
 
 // Page is dynamic because of searchParams so revalidate doesn't do anything
 // But we leave it for learning purposes
@@ -34,6 +35,7 @@ const CabinsPage = ({ searchParams }) => {
 
       <Suspense fallback={<Spinner />} key={filter}>
         <CabinList filter={filter} />
+        <ReservationReminder />
       </Suspense>
     </div>
   );
