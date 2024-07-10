@@ -4,10 +4,6 @@ import Spinner from '../_components/Spinner';
 import Filter from '../_components/Filter';
 import ReservationReminder from '../_components/ReservationReminder';
 
-// Page is dynamic because of searchParams so revalidate doesn't do anything
-// But we leave it for learning purposes
-export const revalidate = 3600;
-
 export const metadata = {
   title: 'Cabins',
 };
