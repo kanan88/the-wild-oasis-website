@@ -16,6 +16,4 @@ export const GET = async (request, { params }) => {
   } catch {
     return Response.json({ message: 'Cabin not found' });
   }
-
-  return Response.json({ test: 'test' });
 };
