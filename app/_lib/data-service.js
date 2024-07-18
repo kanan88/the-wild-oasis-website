@@ -198,7 +198,7 @@ export const updateGuest = async (id, updatedFields) => {
   return data;
 };
 
-export async function updateBooking(id, updatedFields) {
+export const updateBooking = async (id, updatedFields) => {
   const { data, error } = await supabase
     .from('bookings')
     .update(updatedFields)
@@ -211,7 +211,7 @@ export async function updateBooking(id, updatedFields) {
     throw new Error('Booking could not be updated');
   }
   return data;
-}
+};
 
 /////////////
 // DELETE
