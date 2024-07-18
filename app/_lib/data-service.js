@@ -78,7 +78,7 @@ export async function getBooking(id) {
   return data;
 }
 
-export async function getBookings(guestId) {
+export const getBookings = async (guestId) => {
   const { data, error, count } = await supabase
     .from('bookings')
     // We actually also need data on the cabins as well. But let's ONLY take the data that we actually need, in order to reduce downloaded data.
@@ -94,7 +94,7 @@ export async function getBookings(guestId) {
   }
 
   return data;
-}
+};
 
 export const getBookedDatesByCabinId = async (cabinId) => {
   let today = new Date();
