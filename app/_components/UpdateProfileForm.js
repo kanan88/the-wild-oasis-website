@@ -2,7 +2,7 @@ import { updateGuest } from '../_lib/actions';
 import SubmitButton from './SubmitButton';
 
 const UpdateProfileForm = ({ guest, children }) => {
-  const { fullName, email, nationality, nationalID, countryFlag } = guest;
+  const { fullName, email, nationalID, countryFlag } = guest;
 
   return (
     <form
